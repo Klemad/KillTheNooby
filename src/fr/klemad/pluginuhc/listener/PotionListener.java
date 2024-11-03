@@ -24,9 +24,10 @@ public class PotionListener implements Listener {
 	        if (player.hasPotionEffect(PotionEffectType.INCREASE_DAMAGE))
 	          for (PotionEffect effect : player.getActivePotionEffects()) {
 	            if (effect.getType().equals(PotionEffectType.INCREASE_DAMAGE)) {
-	              int level = effect.getAmplifier() + 1;
-	              double newDamage = event.getDamage(EntityDamageEvent.DamageModifier.BASE) / (level * 1.3D + 1.0D) + (6 * level);
-	              double damagePercent = newDamage / event.getDamage(EntityDamageEvent.DamageModifier.BASE);
+	              double strengthDamage = event.getDamage(EntityDamageEvent.DamageModifier.BASE);
+	              double baseDamage = strengthDamage/ (2.3D) ;
+	              double newDamage =  baseDamage + 6D ;
+	              double damagePercent = newDamage / strengthDamage;
 	              try {
 	                event.setDamage(EntityDamageEvent.DamageModifier.ARMOR, event.getDamage(EntityDamageEvent.DamageModifier.ARMOR) * damagePercent);
 	              } catch (Exception exception) {}

@@ -61,7 +61,7 @@ public class ScoreboardHandler implements Listener {
     this.main = main;
     this.heure = 0;
     this.minute = 0;
-    this.seconde = 0;
+    this.seconde = -1;
     this.scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
     if (this.scoreboard.getObjectives().isEmpty()) {
       this.vie = this.scoreboard.registerNewObjective("vie", "health");

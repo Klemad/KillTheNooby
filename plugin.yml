@@ -1,0 +1,55 @@
+name: killTheNooby
+main: fr.klemad.pluginuhc.Main
+version: 1.0
+author: klemad
+description: hi!
+api-version: 1.8
+commands:
+ timer:
+  enabled: true
+  aliases:
+  - timer
+  usage: /timer
+  description: Ne pas utiliser, rau fonctionnement automatique.
+ steak:
+  enabled: true
+  aliases:
+  - steak
+  usage: /steak
+  description: Donne 5 steaks. Utilisautomatiquement par le plugin quand on lance l'UHC.
+ bordures:
+  enabled: true
+  aliases:
+  - bordures
+  usage: /bordures Diam
+  description: La bordure est par dde -1000 1000. Permet de modifier en la faisant aller de -x x.
+ resetbordures:
+  enabled: true
+  aliases:
+  - resetbordures
+  usage: /resetbordures
+  description: Permet de reset les bordures si quelqu'un est coincau lieu de reload le plugin et tout faire planter.
+ tempspvp:
+  enabled: true
+  aliases:
+  - tempspvp
+  usage: /tempspvp tempsEnMinutes
+  description: Le PVP est actif par d30 min. Permet de modifier en entrant la minute partir de laquelle le PVP est actif.
+ rapide:
+  enabled: true
+  aliases:
+  - rapide
+  usage: /rapide
+  description: Rendre l'UHC rapide ou non.
+ randomteam:
+  enabled: true
+  aliases:
+  - randomteam
+  usage: /randomteam nommbreDeJoueursParEquipe
+  description: Crles al
+ pvp:
+  enabled: true
+  aliases:
+  - pvp
+  usage: /pvp
+  description: Activer le pvp manuellement.

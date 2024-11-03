@@ -104,14 +104,14 @@ public class Main extends JavaPlugin {
             else if (Main.this.sbHandler.jour == 2) { /* La première journée dure 20 minutes, pas de message au bout de 10 minutes. */
             	
             }
-            else if (Main.this.sbHandler.jour % 2 == 1) { /* S'il faisait nuit et que ce n'était pas la "première nuit" (que l'on saute) */
+            else if (Main.this.sbHandler.jour % 2 == 0) { /* S'il faisait nuit et que ce n'était pas la "première nuit" (que l'on saute) */
               for (String player : Main.this.participants)
                 Bukkit.getServer().getPlayer(player).sendMessage("C'est le jour " + Main.this.sbHandler.compteurString); 
-            } else if (Main.this.sbHandler.jour % 2 == 0) {
+            } else if (Main.this.sbHandler.jour % 2 == 1) {
               Bukkit.broadcastMessage("Ca va être tout noir !");
             } 
           }
-        }, 0L, 12000L);
+        }, 0L, 12000L); /* 12000L pour le cycle normal, 600L pour 30s */
   }
   
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -163,7 +163,7 @@ public class Main extends JavaPlugin {
               Main.this.updateJour();
               Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), "gamerule doDaylightCycle true");
             }
-          }, 12000L);
+          }, 12000L); /* vrai temps 12000L*/
       scheduler.scheduleSyncDelayedTask((Plugin)this, new Runnable() {
             public void run() {
               if (!Main.this.borduresBool)

@@ -42,7 +42,7 @@ public class CraftListener implements Listener {
       } else if (resultat.getType() == Material.WOOD_SWORD) {
         ItemStack sword = new ItemStack(Material.STONE_SWORD);
         ItemMeta meta = sword.getItemMeta();
-        meta.setDisplayName("Hache en PierrePierre");
+        meta.setDisplayName("Épée en PierrePierre");
         sword.setItemMeta(meta);
         event.getInventory().setResult(sword);
       } 
@@ -62,7 +62,7 @@ public class CraftListener implements Listener {
           loresList.add(ChatColor.GRAY + "Force (8:00)");
           loresList.add("");
           loresList.add(ChatColor.DARK_PURPLE + "Effet :");
-          loresList.add(ChatColor.BLUE + "+2,5 coeurs de degat");
+          loresList.add(ChatColor.BLUE + "+3 coeurs flat");
           meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_POTION_EFFECTS });
           meta.setLore(loresList);
           item.setItemMeta((ItemMeta)meta);
@@ -72,7 +72,7 @@ public class CraftListener implements Listener {
           loresList.add(ChatColor.GRAY + "Force (3:00)");
           loresList.add("");
           loresList.add(ChatColor.DARK_PURPLE + "Effet :");
-          loresList.add(ChatColor.BLUE + "+2,5 coeurs de degat");
+          loresList.add(ChatColor.BLUE + "+3 coeurs flat");
           meta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_POTION_EFFECTS });
           meta.setLore(loresList);
           item.setItemMeta((ItemMeta)meta);
